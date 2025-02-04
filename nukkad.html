@@ -202,22 +202,24 @@
 
 
     <!-- Footer -->
-    <div class="bg-black h-screen w-screen flex flex-col lg:gap-32 items-center justify-center">
+    <div class="bg-black h-screen w-screen pt-8 flex flex-col lg:gap-32 items-center justify-center">
       <div class="text-center items-start flex flex-col leading-none">
-        <div class="sm:flex lg:pt-10 sm:w-[100vw] w-[90vw] h-[70vh] items-center justify-center">
-          <div>
-            <img src="/images/lkoi.svg" class="w-[100vw] sm:w-[100vw] sm:h-[90vh] h-[90vw] object-center" width="300px"
-              height="400px" alt="" />
-          </div>
+        <div class=" sm:flex  sm:w-[100vw] w-[90vw] h-[70vh] items-center justify-center">
+          <div><img src="/images/lkoi.svg" class="w-[100vw] sm:w-[100vw] sm:h-[90vh]  h-[90vw] object-center"
+              width="300px" height="400px" alt=""></div>
 
           <!-- Circular Text Button -->
-          <div class="relative flex w-[50vw] h-[30vh] items-center justify-center">
+          <div class="relative flex w-[50vw] h-[30vh]  items-center justify-center">
+
             <!-- Spinning Circular SVG -->
             <svg xmlns="http://www.w3.org/2000/svg" width="250" height="250" viewBox="0 0 200 200"
-              class="text-lg slow-spin">
+              class="text-lg  slow-spin  ">
+
               <circle cx="100" cy="100" r="60" fill="none" />
 
+
               <path id="circlePath" d="M 100,100 m -75,0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0" fill="none" />
+
 
               <text fill="orange">
                 <textPath href="#circlePath" startOffset="0%">
@@ -237,34 +239,36 @@
               </svg>
             </a>
           </div>
+
         </div>
-        <div class="bg-black w-screen gap-10 sm:flex sm:justify-center sm:items-center justify-between px-4 py-4">
-          <div class="flex justify-around gap-16">
-            <div class="text-gray-700 hover:text-white flex flex-col">
-              <p>HOME</p>
-              <p>EVENT</p>
-              <p>ABOUT</p>
+        <div class=" bg-black w-screen gap-10 sm:flex sm:justify-center sm:items-center justify-between px-4 py-4">
+
+          <div class="flex flex-col items-start gap-2">
+            <div class="flex justify-around  gap-16">
+              <div class="text-gray-700 hover:text-white flex flex-col">
+                <a class="cursor-pointer" href="index.html">HOME</a>
+                <a class="cursor-pointer" href="events.html">EVENT</a>
+                <a class="cursor-pointer" href="index.html">ABOUT</a>
+              </div>
+              <div class="text-gray-700 hover:text-white flex flex-col">
+                <p class="cursor-pointer">CONTACT</p>
+                <p class="cursor-pointer">TERMS</p>
+                <p class="cursor-pointer">PRIVACY</p>
+              </div>
+              <div class="text-gray-700 hover:text-white flex flex-col">
+                <a class="cursor-pointer" href="https://www.instagram.com/encore.iet/">INSTAGRAM</a>
+                <a class="cursor-pointer" href="#">FACEBOOK</a>
+              </div>
             </div>
-            <div class="text-gray-700 hover:text-white flex flex-col">
-              <p>CONTACT</p>
-              <p>TERMS</p>
-              <p>PRIVACY</p>
-            </div>
-            <div class="text-gray-700 hover:text-white flex flex-col">
-              <p>INSTAGRAM</p>
-              <p>FACEBOOK</p>
-              {" "}
-            </div>
+            <a href="https://www.instagram.com/itsme_abhishek_kashyap/" class="text-gray-500 hover:text-white cursor-pointer pb-2 font-serif">Design and Develop by Abhishek Kashyap</a>
           </div>
-          <div class="text-center flex flex-col gap-2">
+          <div class="text-center flex flex-col gap-2 ">
             <div class="flex gap-4">
-              <div class="sm:text-left pl-4 flex">
-                <h3 class="font-bold text-gray-700 hover:text-white mb-2">
-                  Encore
-                </h3>
+              <div class="sm:text-left pl-4 flex  ">
+                <h3 class="font-bold text-gray-700 hover:text-white mb-2">Encore</h3>
                 <p class="text-gray-500 hover:text-white">©2025</p>
               </div>
-              <p class="text-gray-700 hover:text-white mb-2">Contact Us</p>
+              <p class="text-gray-700 hover:text-white mb-2"> Contact Us </p>
             </div>
             <button
               class="bg-gray-700 hover:text-white hover:bg-gray-800 lg:w-[20vw] sm:w-[30vw] text-white font-bold py-2 px-4 rounded-full">
@@ -272,7 +276,10 @@
             </button>
           </div>
         </div>
+
       </div>
+
+
     </div>
   </div>
 
