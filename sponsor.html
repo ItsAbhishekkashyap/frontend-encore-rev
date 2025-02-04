@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sponsors</title>
+  <link rel="shortcut icon" href="/images/logo1.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes slow-spin {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      overflow-x: hidden;
+      font-family: "Cinzel", serif;
+    }
+
+    @keyframes glow {
+      0% {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+      }
+
+      50% {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+      }
+
+      100% {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+      }
+    }
+
+    .hover-effect {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      background: rgba(255, 255, 255, 0.4);
+      border-radius: 50%;
+      pointer-events: none;
+      transition: transform 0.3s ease-out;
+    }
+
+    .slow-spin {
+      animation: slow-spin 15s linear infinite;
+    }
+
+    .hover-circle {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hover-circle::before {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.3);
+      transform: scale(0);
+      transition: all 0.4s ease;
+    }
+
+    .hover-circle:hover::before {
+      transform: scale(12);
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="w-screen h-screen bg-black">
+    <!-- Navbar -->
+
+    <nav id="navbar"
+      class="fixed w-full z-50 pt-4 translate-y-0 lg:translate-y-0 transition-transform duration-500 ease-in-out px-4">
+      <div class="max-w-6xl justify-center items-center flex mx-auto">
+        <div
+          class="bg-[#FFA500] sm:opacity-90 opacity-90 rounded-full sm:w-[25vw] w-[100vw] px-2 py-4 flex justify-center items-center space-x-8">
+          <!-- <a href="#" class="text-white hover:text-white hover:opacity-50 transition-colors">Home</a> -->
+          <a href="events.html" class="text-white hover:text-white hover:opacity-50 transition-colors">Events</a>
+          <a href="caportal.html" class="text-white hover:text-white hover:opacity-50 transition-colors">CA Portal</a>
+          <a href="sponsor.html" class="text-white hover:text-white hover:opacity-50 transition-colors">Sponsorship</a>
+        </div>
+      </div>
+    </nav>
+
+
+
+    <div
+      class="w-screen min-h-screen pt-20 bg-[url('/images/s5.svg')] bg-cover bg-no-repeat bg-center bg-fixed  bg-black  justify-center items-center p-6">
+      <h2 class="text-4xl font-extrabold mb-4 pt-16 text-[#E79705] text-center">Our Sponsors</h2>
+
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 p-8 md:grid-cols-3 lg:grid-cols-4 gap-6">
+
+        <div class=" rounded-lg overflow-hidden transform transition duration-300 hover:scale-110">
+            <img src="/images/sponsor/1.jpg" alt="Image 1" class="w-full h-48 object-cover">
+        </div>
+    
+        <div class=" rounded-lg overflow-hidden transform transition duration-300 hover:scale-110">
+            <img src="/images/sponsor/2.jpg" alt="Image 2" class="w-full h-48 object-cover">
+        </div>
+    
+        <div class=" rounded-lg overflow-hidden transform transition duration-300 hover:scale-110">
+            <img src="/images/sponsor/3.jpg" alt="Image 3" class="w-full h-48 object-cover">
+        </div>
+    
+        <div class=" rounded-lg overflow-hidden transform transition duration-300 hover:scale-110">
+            <img src="/images/sponsor/4.jpg" alt="Image 4" class="w-full h-48 object-cover">
+        </div>
+    
+        <!-- More divs as needed -->
+        <div class=" rounded-lg overflow-hidden transform transition duration-300 hover:scale-110">
+            <img src="/images/sponsor/5.jpg" alt="Image 5" class="w-full h-48 object-cover">
+        </div>
+    
+        <div class=" rounded-lg overflow-hidden transform transition duration-300 hover:scale-110">
+            <img src="/images/sponsor/6.jpg" alt="Image 6" class="w-full h-48 object-cover">
+        </div>
+    
+        <div class=" rounded-lg overflow-hidden transform transition duration-300 hover:scale-110">
+            <img src="/images/sponsor/7.jpg" alt="Image 7" class="w-full h-48 object-cover">
+        </div>
+    
+        <div class=" rounded-lg overflow-hidden transform transition duration-300 hover:scale-110">
+            <img src="/images/sponsor/8.jpg" alt="Image 8" class="w-full h-48 object-cover">
+        </div>
+    
+        <div class=" rounded-lg overflow-hidden transform transition duration-300 hover:scale-110">
+            <img src="/images/sponsor/9.jpg" alt="Image 9" class="w-full h-48 object-cover">
+        </div>
+    
+        <div class=" rounded-lg overflow-hidden transform transition duration-300 hover:scale-110">
+            <img src="/images/sponsor/10.jpg" alt="Image 10" class="w-full h-48 object-cover">
+        </div>
+    
+        <div class=" rounded-lg overflow-hidden transform transition duration-300 hover:scale-110">
+            <img src="/images/sponsor/11.jpg" alt="Image 11" class="w-full h-48 object-cover">
+        </div>
+    
+        <div class=" rounded-lg overflow-hidden transform transition duration-300 hover:scale-110">
+            <img src="/images/sponsor/12.jpg" alt="Image 12" class="w-full h-48 object-cover">
+        </div>
+    
+    </div>
+
+    </div>
+
+
+    <!-- Footer -->
+    <div class="bg-black h-screen w-screen overflow-y-auto flex flex-col lg:gap-32 items-center justify-center">
+      <div class="text-center items-start flex flex-col leading-none">
+        <div class="sm:flex lg:pt-10 sm:w-[100vw] w-[90vw] h-[70vh] items-center justify-center">
+          <div>
+            <img src="/images/lkoi.svg" class="w-[100vw] sm:w-[100vw] sm:h-[90vh] h-[90vw] object-center" width="300px"
+              height="400px" alt="" />
+          </div>
+
+          <!-- Circular Text Button -->
+          <div class="relative flex w-[50vw] h-[30vh] items-center justify-center">
+            <!-- Spinning Circular SVG -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="250" height="250" viewBox="0 0 200 200"
+              class="text-lg slow-spin">
+              <circle cx="100" cy="100" r="60" fill="none" />
+
+              <path id="circlePath" d="M 100,100 m -75,0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0" fill="none" />
+
+              <text fill="orange">
+                <textPath href="#circlePath" startOffset="0%">
+                  Take part in events •
+                </textPath>
+                <textPath href="#circlePath" startOffset="50%">
+                  Register now •
+                </textPath>
+              </text>
+            </svg>
+
+            <!-- Clickable Button Inside -->
+            <a href="register"
+              class="absolute w-20 h-20 bg-black rounded-full flex items-center justify-center hover:scale-110 transition">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 12">
+                <path d="M7 7h8.586L5.293 17.293l1.414 1.414L17 8.414V17h2V5H7v2z" fill="white" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="bg-black w-screen gap-10 sm:flex sm:justify-center sm:items-center justify-between px-4 py-4">
+          <div class="flex justify-around gap-16">
+            <div class="text-gray-700 hover:text-white flex flex-col">
+              <p>HOME</p>
+              <p>EVENT</p>
+              <p>ABOUT</p>
+            </div>
+            <div class="text-gray-700 hover:text-white flex flex-col">
+              <p>CONTACT</p>
+              <p>TERMS</p>
+              <p>PRIVACY</p>
+            </div>
+            <div class="text-gray-700 hover:text-white flex flex-col">
+              <p>INSTAGRAM</p>
+              <p>FACEBOOK</p>
+              {" "}
+            </div>
+          </div>
+          <div class="text-center flex flex-col gap-2">
+            <div class="flex gap-4">
+              <div class="sm:text-left pl-4 flex">
+                <h3 class="font-bold text-gray-700 hover:text-white mb-2">
+                  Encore
+                </h3>
+                <p class="text-gray-500 hover:text-white">©2025</p>
+              </div>
+              <p class="text-gray-700 hover:text-white mb-2">Contact Us</p>
+            </div>
+            <button
+              class="bg-gray-700 hover:text-white hover:bg-gray-800 lg:w-[20vw] sm:w-[30vw] text-white font-bold py-2 px-4 rounded-full">
+              +91 9175408641
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script>
+      // for navbar
+      const navbar = document.getElementById("navbar");
+      let prevScrollPos = window.pageYOffset;
+
+      window.addEventListener("scroll", () => {
+        const currentScrollPos = window.pageYOffset;
+        const navbarHeight = navbar.offsetHeight;
+
+        if (prevScrollPos > currentScrollPos) {
+          // Scrolling up
+          navbar.style.transform = `translateY(0)`;
+        } else {
+          // Scrolling down
+          navbar.style.transform = `translateY(-${navbarHeight}px)`;
+        }
+
+        prevScrollPos = currentScrollPos;
+      });
+
+      // Sponsors
+
+
+    </script>
+</body>
+
+</html>

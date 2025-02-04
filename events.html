@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet" />
+
+    <link href="./src/output.css" rel="stylesheet" />
+  <!-- <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" /> -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet" />
+
+  <!-- Swiper.js CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+     body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      overflow-x: hidden;
+      font-family: "Cinzel", serif;
+    }
+
+    /* Slow Spin Animation */
+    @keyframes slow-spin {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .slow-spin {
+      animation: slow-spin 15s linear infinite;
+    }
+  </style>
+
+ 
+</head>
+
+<body>
+    <nav id="navbar"
+    class="fixed w-full z-50 pt-4 translate-y-0 lg:translate-y-0 transition-transform duration-500 ease-in-out px-4">
+    <div class="max-w-6xl justify-center items-center flex mx-auto">
+      <div class="bg-[#FFA500] sm:opacity-90 opacity-90 rounded-full sm:w-[25vw] w-[100vw] px-2 py-4 flex justify-center items-center space-x-8">
+        <!-- <a href="#" class="text-white hover:text-white hover:opacity-50 transition-colors">Home</a> -->
+        <a href="index.html" class="text-white hover:text-white hover:opacity-50 transition-colors">Home</a>
+        <a href="caportal.html" class="text-white hover:text-white hover:opacity-50 transition-colors">CA Portal</a>
+        <a href="sponsor.html" class="text-white hover:text-white hover:opacity-50 transition-colors">Sponsorship</a>
+      </div>
+    </div>
+  </nav>
+  <div class="w-screen min-h-screen pt-32 bg-[url('/images/s5.svg')] bg-cover bg-no-repeat bg-center bg-fixed  bg-black flex justify-center items-center p-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      <!-- Card -->
+      <div class="rounded-2xl shadow-lg bg-white overflow-hidden transform transition duration-300 hover:scale-110 hover:shadow-xl max-w-[250px] border border-white">
+        <!-- Image Container -->
+        <div class="  text-white  object-cover ">
+          <!-- Image can be added here -->
+          <img src="/images/event/1.jpg" alt="Event Image" class="w-full h-full object-cover">
+        </div>
+      
+        <!-- Content Container with Background -->
+        <div class="bg-white text-white p-4 min-h-[120px] object- flex flex-col justify-between">
+          <h5 class="text-lg font-bold text-[#B37400]">Darpan</h5>
+          <p class="text-black text-sm mt-2">(Photography) </p>
+          <a href="photography.html" class="mt-4 block text-center bg-[#B37400] hover:bg-[#B37400] text-white font-semibold py-2 px-4 rounded-lg transition duration-200">
+            Enroll Now
+          </a>
+        </div>
+      </div>
+
+      
+      <div class="rounded-2xl shadow-lg bg-white overflow-hidden transform transition duration-300 hover:scale-110 hover:shadow-xl max-w-[250px] border border-white">
+        <!-- Image Container -->
+        <div class="  text-white  object-cover ">
+          <!-- Image can be added here -->
+          <img src="/images/event/2.jpg" alt="Event Image" class="w-full h-full object-cover">
+        </div>
+      
+        <!-- Content Container with Background -->
+        <div class="bg-white text-white p-4 min-h-[120px] flex flex-col justify-between">
+          <h5 class="text-lg font-bold text-[#B37400]">Reel Making</h5>
+          <p class="text-black text-sm mt-2"></p>
+          <a href="reel.html" class="mt-4 block text-center bg-[#B37400] hover:bg-[#B37400] text-white font-semibold py-2 px-4 rounded-lg transition duration-200">
+            Enroll Now
+          </a>
+        </div>
+      </div>
+  
+      <div class="rounded-2xl shadow-lg bg-white overflow-hidden transform transition duration-300 hover:scale-110 hover:shadow-xl max-w-[250px] border border-white">
+        <!-- Image Container -->
+        <div class="  text-white  object-cover ">
+          <!-- Image can be added here -->
+          <img src="/images/event/3.jpg" alt="Event Image" class="w-full h-full object-cover">
+        </div>
+      
+        <!-- Content Container with Background -->
+        <div class="bg-white text-white p-4 min-h-[120px] flex flex-col justify-between">
+          <h5 class="text-lg font-bold text-[#B37400]">Treasur Hunt</h5>
+          <p class="text-black text-sm mt-2"></p>
+          <a href="#" class="mt-4 block text-center bg-[#B37400] hover:bg-[#B37400] text-white font-semibold py-2 px-4 rounded-lg transition duration-200">
+            Enroll Now
+          </a>
+        </div>
+      </div>
+
+      <div class="rounded-2xl shadow-lg bg-white overflow-hidden transform transition duration-300 hover:scale-110 hover:shadow-xl max-w-[250px] border border-white">
+        <!-- Image Container -->
+        <div class="  text-white  object-cover ">
+          <!-- Image can be added here -->
+          <img src="/images/event/4.jpg" alt="Event Image" class="w-full h-full object-cover">
+        </div>
+      
+        <!-- Content Container with Background -->
+        <div class="bg-white text-white p-4 min-h-[120px] flex flex-col justify-between">
+          <h5 class="text-lg font-bold text-[#B37400]">Marketing Mania</h5>
+          <p class="text-black text-sm mt-2"></p>
+          <a href="marketing.html" class="mt-4 block text-center bg-[#B37400] hover:bg-[#B37400] text-white font-semibold py-2 px-4 rounded-lg transition duration-200">
+            Enroll Now
+          </a>
+        </div>
+      </div>
+
+      <div class="rounded-2xl shadow-lg bg-white overflow-hidden transform transition duration-300 hover:scale-110 hover:shadow-xl max-w-[250px] border border-white">
+       
+        <div class="  text-white  object-cover ">
+         
+          <img src="/images/event/5.jpg" alt="Event Image" class="w-full h-full object-cover">
+        </div>
+      
+        
+        <div class="bg-white text-white p-4 min-h-[120px] flex flex-col justify-between">
+          <h5 class="text-lg font-bold text-[#B37400]">Tasveeron ki dastan</h5>
+          <p class="text-black text-sm font-serif mt-2">(Picture Story)</p>
+          <a href="picture.html" class="mt-4 block text-center bg-[#B37400] hover:bg-[#B37400] text-white font-semibold py-2 px-4 rounded-lg transition duration-200">
+            Enroll Now
+          </a>
+        </div>
+      </div>
+
+      <div class="rounded-2xl shadow-lg  overflow-hidden transform transition duration-300 hover:scale-110 hover:shadow-xl max-w-[250px] border border-white">
+       
+        <div class="  text-white  object-cover ">
+          
+          <img src="/images/event/5.jpg" alt="Event Image" class="w-full h-full object-cover">
+        </div>
+      
+        
+        <div class="bg-white text-white p-4 min-h-[120px] flex flex-col justify-between">
+          <h5 class="text-lg font-bold text-[#B37400]">Card Title</h5>
+          <p class="text-black text-sm font-serif mt-2">Quick example text to build on the card title.</p>
+          <a href="#" class="mt-4 block text-center bg-[#B37400] hover:bg-[#B37400] text-white font-semibold py-2 px-4 rounded-lg transition duration-200">
+            Enroll Now
+          </a>
+        </div>
+      </div>
+
+      <div class="rounded-2xl shadow-lg bg-white overflow-hidden transform transition duration-300 hover:scale-110 hover:shadow-xl max-w-[250px] border border-white">
+        <!-- Image Container -->
+        <div class="  text-white  object-cover ">
+          <!-- Image can be added here -->
+          <img src="/images/event/6.jpg" alt="Event Image" class="w-full h-full object-cover">
+        </div>
+      
+        <!-- Content Container with Background -->
+        <div class="bg-white text-white p-4 min-h-[120px] flex flex-col justify-between">
+          <h5 class="text-lg font-bold text-[#B37400]">One to One Battle</h5>
+          <p class="text-black text-sm mt-2"></p>
+          <a href="dancebattle.html" class="mt-4 block text-center bg-[#B37400] hover:bg-[#B37400] text-white font-semibold py-2 px-4 rounded-lg transition duration-200">
+            Enroll Now
+          </a>
+        </div>
+      </div>
+
+      <div class="rounded-2xl shadow-lg bg-white overflow-hidden transform transition duration-300 hover:scale-110 hover:shadow-xl max-w-[250px] border border-white">
+        <!-- Image Container -->
+        <div class="  text-white  object-cover ">
+          <!-- Image can be added here -->
+          <img src="/images/event/7.jpg" alt="Event Image" class="w-full h-full object-cover">
+        </div>
+      
+        <!-- Content Container with Background -->
+        <div class="bg-white text-white p-4 min-h-[120px] flex flex-col justify-between">
+          <h5 class="text-lg font-bold text-[#B37400]">Roobaroo</h5>
+          <p class="text-black text-sm mt-2">(Debate)</p>
+          <a href="debate.html" class="mt-4 block text-center bg-[#B37400] hover:bg-[#B37400] text-white font-semibold py-2 px-4 rounded-lg transition duration-200">
+            Enroll Now
+          </a>
+        </div>
+      </div>
+
+      <div class="rounded-2xl shadow-lg bg-white overflow-hidden transform transition duration-300 hover:scale-110 hover:shadow-xl max-w-[250px] border border-white">
+        <!-- Image Container -->
+        <div class="  text-white  object-cover ">
+          <!-- Image can be added here -->
+          <img src="/images/event/8.jpg" alt="Event Image" class="w-full h-full object-cover">
+        </div>
+      
+        <!-- Content Container with Background -->
+        <div class="bg-white text-white p-4 min-h-[120px] flex flex-col justify-between">
+          <h5 class="text-lg font-bold text-[#B37400]">Rangmanch</h5>
+          <p class="text-black text-sm mt-2">(Oen Stage)</p>
+          <a href="stage.html" class="mt-4 block text-center bg-[#B37400] hover:bg-[#B37400] text-white font-semibold py-2 px-4 rounded-lg transition duration-200">
+            Enroll Now
+          </a>
+        </div>
+      </div>
+
+      <div class="rounded-2xl shadow-lg bg-white overflow-hidden transform transition duration-300 hover:scale-110 hover:shadow-xl max-w-[250px] border border-white">
+        <!-- Image Container -->
+        <div class="  text-white  object-cover ">
+          <!-- Image can be added here -->
+          <img src="/images/event/9.jpg" alt="Event Image" class="w-full h-full object-cover">
+        </div>
+      
+        <!-- Content Container with Background -->
+        <div class="bg-white text-white p-4 min-h-[120px] flex flex-col justify-between">
+          <h5 class="text-lg font-bold text-[#B37400]">Sargam</h5>
+          <p class="text-black text-sm mt-2">(Solo Singing)</p>
+          <a href="solo.html" class="mt-4 block text-center bg-[#B37400] hover:bg-[#B37400] text-white font-semibold py-2 px-4 rounded-lg transition duration-200">
+            Enroll Now
+          </a>
+        </div>
+      </div>
+
+      <div class="rounded-2xl shadow-lg bg-white overflow-hidden transform transition duration-300 hover:scale-110 hover:shadow-xl max-w-[250px] border border-white">
+        <!-- Image Container -->
+        <div class="  text-white  object-cover ">
+          <!-- Image can be added here -->
+          <img src="/images/event/10.jpg" alt="Event Image" class="w-full h-full object-cover">
+        </div>
+      
+        <!-- Content Container with Background -->
+        <div class="bg-white text-white p-4 min-h-[120px] flex flex-col justify-between">
+          <h5 class="text-lg font-bold text-[#B37400]">Swarsangam</h5>
+          <p class="text-black text-sm mt-2">(Band War)</p>
+          <a href="bandwar.html" class="mt-4 block text-center bg-[#B37400] hover:bg-[#B37400] text-white font-semibold py-2 px-4 rounded-lg transition duration-200">
+            Enroll Now
+          </a>
+        </div>
+      </div>
+
+      <div class="rounded-2xl shadow-lg bg-white overflow-hidden transform transition duration-300 hover:scale-110 hover:shadow-xl max-w-[250px] border border-white">
+        <!-- Image Container -->
+        <div class="  text-white  object-cover ">
+          <!-- Image can be added here -->
+          <img src="/images/event/11.jpg" alt="Event Image" class="w-full h-full object-cover">
+        </div>
+      
+        <!-- Content Container with Background -->
+        <div class="bg-white text-white p-4 min-h-[120px] flex flex-col justify-between">
+          <h5 class="text-lg font-bold text-[#B37400]">Graffiti Extravanza</h5>
+          <p class="text-black text-sm mt-2"></p>
+          <a href="graffiti.html" class="mt-4 block text-center bg-[#B37400] hover:bg-[#B37400] text-white font-semibold py-2 px-4 rounded-lg transition duration-200">
+            Enroll Now
+          </a>
+        </div>
+      </div>
+
+      <div class="rounded-2xl shadow-lg bg-white overflow-hidden transform transition duration-300 hover:scale-110 hover:shadow-xl max-w-[250px] border border-white">
+        <!-- Image Container -->
+        <div class="  text-white  object-cover ">
+          <!-- Image can be added here -->
+          <img src="/images/event/12.jpg" alt="Event Image" class="w-full h-full object-cover">
+        </div>
+      
+        <!-- Content Container with Background -->
+        <div class="bg-white text-white p-4 min-h-[120px] flex flex-col justify-between">
+          <h5 class="text-lg font-bold text-[#B37400]">Mukhauta</h5>
+          <p class="text-black text-sm mt-2">(Face Painting)</p>
+          <a href="face.html" class="mt-4 block text-center bg-[#B37400] hover:bg-[#B37400] text-white font-semibold py-2 px-4 rounded-lg transition duration-200">
+            Enroll Now
+          </a>
+        </div>
+      </div>
+
+      <div class="rounded-2xl shadow-lg bg-white overflow-hidden transform transition duration-300 hover:scale-110 hover:shadow-xl max-w-[250px] border border-white">
+        <!-- Image Container -->
+        <div class="  text-white  object-cover ">
+          <!-- Image can be added here -->
+          <img src="/images/event/13.jpg" alt="Event Image" class="w-full h-full object-cover">
+        </div>
+      
+        <!-- Content Container with Background -->
+        <div class="bg-white text-white p-4 min-h-[120px] flex flex-col justify-between">
+          <h5 class="text-lg font-bold text-[#B37400]">Ekanki</h5>
+          <p class="text-black text-sm mt-2">(Monoact)</p>
+          <a href="monoact.html" class="mt-4 block text-center bg-[#B37400] hover:bg-[#B37400] text-white font-semibold py-2 px-4 rounded-lg transition duration-200">
+            Enroll Now
+          </a>
+        </div>
+      </div>
+
+      <div class="rounded-2xl shadow-lg bg-white overflow-hidden transform transition duration-300 hover:scale-110 hover:shadow-xl max-w-[250px] border border-white">
+        <!-- Image Container -->
+        <div class="  text-white  object-cover ">
+          <!-- Image can be added here -->
+          <img src="/images/event/14.jpg" alt="Event Image" class="w-full h-full object-cover">
+        </div>
+      
+        <!-- Content Container with Background -->
+        <div class="bg-white text-white p-4 min-h-[120px] flex flex-col justify-between">
+          <h5 class="text-lg font-bold text-[#B37400]">T-Shirt Painting</h5>
+          <p class="text-black text-sm mt-2"></p>
+          <a href="tshirt.html" class="mt-4 block text-center bg-[#B37400] hover:bg-[#B37400] text-white font-semibold py-2 px-4 rounded-lg transition duration-200">
+            Enroll Now
+          </a>
+        </div>
+      </div>
+
+      <div class="rounded-2xl shadow-lg bg-white overflow-hidden transform transition duration-300 hover:scale-110 hover:shadow-xl max-w-[250px] border border-white">
+        <!-- Image Container -->
+        <div class="  text-white  object-cover ">
+          <!-- Image can be added here -->
+          <img src="/images/event/15.jpg" alt="Event Image" class="w-full h-full object-cover">
+        </div>
+      
+        <!-- Content Container with Background -->
+        <div class="bg-white text-white p-4 min-h-[120px] flex flex-col justify-between">
+          <h5 class="text-lg font-bold text-[#B37400]">Tehkikat</h5>
+          <p class="text-black text-sm mt-2">(Case Study)</p>
+          <a href="casestudy.html" class="mt-4 block text-center bg-[#B37400] hover:bg-[#B37400] text-white font-semibold py-2 px-4 rounded-lg transition duration-200">
+            Enroll Now
+          </a>
+        </div>
+      </div>
+
+      <div class="rounded-2xl shadow-lg bg-white overflow-hidden transform transition duration-300 hover:scale-110 hover:shadow-xl max-w-[250px] border border-white">
+        <!-- Image Container -->
+        <div class="  text-white  object-cover ">
+          <!-- Image can be added here -->
+          <img src="/images/event/16.jpg" alt="Event Image" class="w-full h-full object-cover">
+        </div>
+      
+        <!-- Content Container with Background -->
+        <div class="bg-white text-white p-4 min-h-[120px] flex flex-col justify-between">
+          <h5 class="text-lg font-bold text-[#B37400]">Pratibimb</h5>
+          <p class="text-black text-sm mt-2">(Live Sketching)</p>
+          <a href="live.html" class="mt-4 block text-center bg-[#B37400] hover:bg-[#B37400] text-white font-semibold py-2 px-4 rounded-lg transition duration-200">
+            Enroll Now
+          </a>
+        </div>
+      </div>
+
+      <div class="rounded-2xl shadow-lg bg-white overflow-hidden transform transition duration-300 hover:scale-110 hover:shadow-xl max-w-[250px] border border-white">
+        <!-- Image Container -->
+        <div class="  text-white  object-cover ">
+          <!-- Image can be added here -->
+          <img src="/images/event/17.jpg" alt="Event Image" class="w-full h-full object-cover">
+        </div>
+      
+        <!-- Content Container with Background -->
+        <div class="bg-white text-white p-4 min-h-[120px] flex flex-col justify-between">
+          <h5 class="text-lg font-bold text-[#B37400]">Mr/Miss Encore</h5>
+          <p class="text-black text-sm mt-2"></p>
+          <a href="mr.html" class="mt-4 block text-center bg-[#B37400] hover:bg-[#B37400] text-white font-semibold py-2 px-4 rounded-lg transition duration-200">
+            Enroll Now
+          </a>
+        </div>
+      </div>
+
+      <div class="rounded-2xl shadow-lg bg-white overflow-hidden transform transition duration-300 hover:scale-110 hover:shadow-xl max-w-[250px] border border-white">
+        <!-- Image Container -->
+        <div class="  text-white  object-cover ">
+          <!-- Image can be added here -->
+          <img src="/images/event/18.jpg" alt="Event Image" class="w-full h-full object-cover">
+        </div>
+      
+        <!-- Content Container with Background -->
+        <div class="bg-white text-white p-4 min-h-[120px] flex flex-col justify-between">
+          <h5 class="text-lg font-bold text-[#B37400]">Rangsaaz</h5>
+          <p class="text-black text-sm mt-2">(Relay Rangoli)</p>
+          <a href="relay.html" class="mt-4 block text-center bg-[#B37400] hover:bg-[#B37400] text-white font-semibold py-2 px-4 rounded-lg transition duration-200">
+            Enroll Now
+          </a>
+        </div>
+      </div>
+
+      <div class="rounded-2xl shadow-lg bg-white overflow-hidden transform transition duration-300 hover:scale-110 hover:shadow-xl max-w-[250px] border border-white">
+        <!-- Image Container -->
+        <div class="  text-white  object-cover ">
+          <!-- Image can be added here -->
+          <img src="/images/event/19.jpg" alt="Event Image" class="w-full h-full object-cover">
+        </div>
+      
+        <!-- Content Container with Background -->
+        <div class="bg-white text-white p-4 min-h-[120px] flex flex-col justify-between">
+          <h5 class="text-lg font-bold text-[#B37400]">Bawaal</h5>
+          <p class="text-black text-sm mt-2">(Nukkad)</p>
+          <a href="nukkad.html" class="mt-4 block text-center bg-[#B37400] hover:bg-[#B37400] text-white font-semibold py-2 px-4 rounded-lg transition duration-200">
+            Enroll Now
+          </a>
+        </div>
+      </div>
+
+      <div class="rounded-2xl shadow-lg bg-white overflow-hidden transform transition duration-300 hover:scale-110 hover:shadow-xl max-w-[250px] border border-white">
+        <!-- Image Container -->
+        <div class="  text-white  object-cover ">
+          <!-- Image can be added here -->
+          <img src="/images/event/20.jpg" alt="Event Image" class="w-full h-full object-cover">
+        </div>
+      
+        <!-- Content Container with Background -->
+        <div class="bg-white text-white p-4 min-h-[120px] flex flex-col justify-between">
+          <h5 class="text-lg font-bold text-[#B37400]">Raftaar</h5>
+          <p class="text-black text-sm mt-2">(Rap Battle)</p>
+          <a href="" class="mt-4 block text-center bg-[#B37400] hover:bg-[#B37400] text-white font-semibold py-2 px-4 rounded-lg transition duration-200">
+            Enroll Now
+          </a>
+        </div>
+      </div>
+
+      <div class="rounded-2xl shadow-lg bg-white overflow-hidden transform transition duration-300 hover:scale-110 hover:shadow-xl max-w-[250px] border border-white">
+        <!-- Image Container -->
+        <div class="  text-white  object-cover ">
+          <!-- Image can be added here -->
+          <img src="/images/event/21.jpg" alt="Event Image" class="w-full h-full object-cover">
+        </div>
+      
+        <!-- Content Container with Background -->
+        <div class="bg-white text-white p-4 min-h-[120px] flex flex-col justify-between">
+          <h5 class="text-lg font-bold text-[#B37400]">Kirdaar</h5>
+          <p class="text-black text-sm mt-2">(Mimicry)</p>
+          <a href="mimicry.html" class="mt-4 block text-center bg-[#B37400] hover:bg-[#B37400] text-white font-semibold py-2 px-4 rounded-lg transition duration-200">
+            Enroll Now
+          </a>
+        </div>
+      </div>
+
+      <div class="rounded-2xl shadow-lg bg-white  overflow-hidden transform transition duration-300 hover:scale-110 hover:shadow-xl max-w-[250px] border border-white">
+        <!-- Image Container -->
+        <div class="  text-white  object-cover ">
+          <!-- Image can be added here -->
+          <img src="/images/event/23.jpg" alt="Event Image" class="w-full h-full object-cover">
+        </div>
+      
+        <!-- Content Container with Background -->
+        <div class="bg-white text-white p-4 min-h-[120px] flex flex-col justify-between">
+          <h5 class="text-lg font-bold text-[#B37400]">Natraj</h5>
+          <p class="text-black text-sm mt-2">(Solo Dance)</p>
+          <a href="solo.html" class="mt-4 block text-center bg-[#B37400] hover:bg-[#B37400] text-white font-semibold py-2 px-4 rounded-lg transition duration-200">
+            Enroll Now
+          </a>
+        </div>
+      </div>
+
+      <div class="rounded-2xl shadow-lg bg-white overflow-hidden transform transition duration-300 hover:scale-110 hover:shadow-xl max-w-[250px] border border-white">
+        <!-- Image Container -->
+        <div class="  text-white  object-cover ">
+          <!-- Image can be added here -->
+          <img src="/images/event/24.jpg" alt="Event Image" class="w-full h-full object-cover">
+        </div>
+      
+        <!-- Content Container with Background -->
+        <div class="bg-white text-white p-4 min-h-[120px] flex flex-col justify-between">
+          <h5 class="text-lg font-bold text-[#B37400]">Safarnama</h5>
+          <p class="text-black text-sm mt-2">(Short Film)</p>
+          <a href="film.html" class="mt-4 block text-center bg-[#B37400] hover:bg-[#B37400] text-white font-semibold py-2 px-4 rounded-lg transition duration-200">
+            Enroll Now
+          </a>
+        </div>
+      </div>
+
+      <div class="rounded-2xl shadow-lg bg-white overflow-hidden transform transition duration-300 hover:scale-110 hover:shadow-xl max-w-[250px] border border-white">
+        <!-- Image Container -->
+        <div class="  text-white  object-cover ">
+          <!-- Image can be added here -->
+          <img src="/images/event/25.jpg" alt="Event Image" class="w-full h-full object-cover">
+        </div>
+      
+        <!-- Content Container with Background -->
+        <div class="bg-white text-white p-4 min-h-[120px] flex flex-col justify-between">
+          <h5 class="text-lg font-bold text-[#B37400]">Maya Bazaar</h5>
+          <p class="text-black text-sm mt-2">(Auction)</p>
+          <a href="auction.html" class="mt-4 block text-center bg-[#B37400] hover:bg-[#B37400] text-white font-semibold py-2 px-4 rounded-lg transition duration-200">
+            Enroll Now
+          </a>
+        </div>
+      </div>
+
+      <div class="rounded-2xl shadow-lg bg-white overflow-hidden transform transition duration-300 hover:scale-110 hover:shadow-xl max-w-[250px] border border-white">
+        <!-- Image Container -->
+        <div class="  text-white  object-cover ">
+          <!-- Image can be added here -->
+          <img src="/images/event/26.jpg" alt="Event Image" class="w-full h-full object-cover">
+        </div>
+      
+        <!-- Content Container with Background -->
+        <div class="bg-white text-white p-4 min-h-[120px] flex flex-col justify-between">
+          <h5 class="text-lg font-bold text-[#B37400]">Model United Nations</h5>
+          <p class="text-black text-sm mt-2">(MUN)</p>
+          <a href="model.html" class="mt-4 block text-center bg-[#B37400] hover:bg-[#B37400] text-white font-semibold py-2 px-4 rounded-lg transition duration-200">
+            Enroll Now
+          </a>
+        </div>
+      </div>
+
+      <div class="rounded-2xl shadow-lg bg-white overflow-hidden transform transition duration-300 hover:scale-110 hover:shadow-xl max-w-[250px] border border-white">
+        <!-- Image Container -->
+        <div class="  text-white  object-cover ">
+          <!-- Image can be added here -->
+          <img src="/images/event/27.jpg" alt="Event Image" class="w-full h-full object-cover">
+        </div>
+      
+        <!-- Content Container with Background -->
+        <div class="bg-white text-white p-4 min-h-[120px] flex flex-col justify-between">
+          <h5 class="text-lg font-bold text-[#B37400]">Afsane</h5>
+          <p class="text-black text-sm mt-2">(Twist a Tale)</p>
+          <a href="twist.html" class="mt-4 block text-center bg-[#B37400] hover:bg-[#B37400] text-white font-semibold py-2 px-4 rounded-lg transition duration-200">
+            Enroll Now
+          </a>
+        </div>
+      </div>
+
+      <div class="rounded-2xl shadow-lg bg-white overflow-hidden transform transition duration-300 hover:scale-110 hover:shadow-xl max-w-[250px] border border-white">
+        <!-- Image Container -->
+        <div class="  text-white  object-cover ">
+          <!-- Image can be added here -->
+          <img src="/images/event/28.jpg" alt="Event Image" class="w-full h-full object-cover">
+        </div>
+      
+        <!-- Content Container with Background -->
+        <div class="bg-white text-white p-4 min-h-[120px] flex flex-col justify-between">
+          <h5 class="text-lg font-bold text-[#B37400]">Rags</h5>
+          <p class="text-black text-sm mt-2">(Group Dance)</p>
+          <a href="group.html" class="mt-4 block text-center bg-[#B37400] hover:bg-[#B37400] text-white font-semibold py-2 px-4 rounded-lg transition duration-200">
+            Enroll Now
+          </a>
+        </div>
+      </div>
+
+      <div class="rounded-2xl shadow-lg bg-white overflow-hidden transform transition duration-300 hover:scale-110 hover:shadow-xl max-w-[250px] border border-white">
+        <!-- Image Container -->
+        <div class="  text-white  object-cover ">
+          <!-- Image can be added here -->
+          <img src="/images/event/29.jpg" alt="Event Image" class="w-full h-full object-cover">
+        </div>
+      
+        <!-- Content Container with Background -->
+        <div class="bg-white text-white p-4 min-h-[120px] flex flex-col justify-between">
+          <h5 class="text-lg font-bold text-[#B37400]">Jumla</h5>
+          <p class="text-black text-sm mt-2">(JAM)</p>
+          <a href="jam.html" class="mt-4 block text-center bg-[#B37400] hover:bg-[#B37400] text-white font-semibold py-2 px-4 rounded-lg transition duration-200">
+            Enroll Now
+          </a>
+        </div>
+      </div>
+
+      
+
+
+      
+    </div>
+  </div>
+  
+  
+
+</div>
+
+  <!-- Footer -->
+  <div class="bg-black h-screen w-screen flex flex-col lg:gap-32 items-center justify-center">
+    <div class="text-center items-start flex flex-col leading-none">
+      <div class=" sm:flex lg:pt-10 sm:w-[100vw] w-[90vw] h-[70vh] items-center justify-center">
+        <div><img src="/images/lkoi.svg" class="w-[100vw] sm:w-[100vw] sm:h-[90vh]  h-[90vw] object-center"
+            width="300px" height="400px" alt=""></div>
+
+        <!-- Circular Text Button -->
+        <div class="relative flex w-[50vw] h-[30vh] items-center justify-center">
+
+          <!-- Spinning Circular SVG -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="250" height="250" viewBox="0 0 200 200"
+            class="text-lg  slow-spin  ">
+
+            <circle cx="100" cy="100" r="60" fill="none" />
+
+
+            <path id="circlePath" d="M 100,100 m -75,0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0" fill="none" />
+
+
+            <text fill="orange">
+              <textPath href="#circlePath" startOffset="0%">
+                Take part in events •
+              </textPath>
+              <textPath href="#circlePath" startOffset="50%">
+                Register now •
+              </textPath>
+            </text>
+          </svg>
+
+          <!-- Clickable Button Inside -->
+          <a href="register"
+            class="absolute w-20 h-20 bg-black rounded-full flex items-center justify-center hover:scale-110 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 12">
+              <path d="M7 7h8.586L5.293 17.293l1.414 1.414L17 8.414V17h2V5H7v2z" fill="white" />
+            </svg>
+          </a>
+        </div>
+
+      </div>
+      <div class=" bg-black w-screen gap-10 sm:flex sm:justify-center sm:items-center justify-between px-4 py-4">
+
+        <div class="flex justify-around  gap-16">
+          <div class="text-gray-700 hover:text-white flex flex-col">
+            <p>HOME</p>
+            <p>EVENT</p>
+            <p>ABOUT</p>
+          </div>
+          <div class="text-gray-700 hover:text-white flex flex-col">
+            <p>CONTACT</p>
+            <p>TERMS</p>
+            <p>PRIVACY</p>
+          </div>
+          <div class="text-gray-700 hover:text-white flex flex-col">
+            <p>INSTAGRAM</p>
+            <p>FACEBOOK</p>{" "}
+          </div>
+        </div>
+        <div class="text-center flex flex-col gap-2 ">
+          <div class="flex gap-4">
+            <div class="sm:text-left pl-4 flex  ">
+              <h3 class="font-bold text-gray-700 hover:text-white mb-2">Encore</h3>
+              <p class="text-gray-500 hover:text-white">©2025</p>
+            </div>
+            <p class="text-gray-700 hover:text-white mb-2"> Contact Us </p>
+          </div>
+          <button
+            class="bg-gray-700 hover:text-white hover:bg-gray-800 lg:w-[20vw] sm:w-[30vw] text-white font-bold py-2 px-4 rounded-full">
+            +91 9175408641
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+   
+  </div>
+
+
+
+
+
+
+
+  <script>
+    // for navbar
+    const navbar = document.getElementById("navbar");
+    let prevScrollPos = window.pageYOffset;
+
+    window.addEventListener("scroll", () => {
+      const currentScrollPos = window.pageYOffset;
+      const navbarHeight = navbar.offsetHeight;
+
+      if (prevScrollPos > currentScrollPos) {
+        // Scrolling up
+        navbar.style.transform = `translateY(0)`;
+      } else {
+        // Scrolling down
+        navbar.style.transform = `translateY(-${navbarHeight}px)`;
+      }
+
+      prevScrollPos = currentScrollPos;
+    });
+  </script>
+</body>
+</html>

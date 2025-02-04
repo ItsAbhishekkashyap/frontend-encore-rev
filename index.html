@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link href="./src/output.css" rel="stylesheet" />
+  <link rel="shortcut icon" href="/images/logo1.png" type="image/x-icon">
+  <!-- <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" /> -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet" />
+
+  <!-- Swiper.js CSS -->
+  <script src="https://kit.fontawesome.com/536b7f8348.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+
+
+  <style>
+    /* Custom CSS for hover effect */
+    .image-container img {
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      box-sizing: border-box;
+      overflow-x: hidden;
+      font-family: "Cinzel", serif;
+    }
+
+    .flip {
+      transform: rotateY(180deg);
+      transition: transform 0.5s ease-in-out;
+    }
+
+    
+    .show-text {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    
+    .card-container {
+      perspective: 1000px;
+    }
+
+    .card {
+      transform-style: preserve-3d;
+      transition: transform 0.3s ease-out;
+    }
+
+    .card img {
+      transition: transform 0.3s ease-out;
+    }
+
+    
+    @keyframes slow-spin {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .slow-spin {
+      animation: slow-spin 15s linear infinite;
+    }
+
+    .swiper-slide img {
+      border-radius: 15px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .swiper-slide-active img {
+      transform: scale(1.1);
+    }
+
+    .image-container {
+      background-size: cover;
+      background-position: center;
+      transition: background-image 0.5s ease-in-out;
+    }
+
+    .lg-h-82 {
+      height: 22rem;
+    }
+
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    
+    .hide-scrollbar {
+      scrollbar-width: none;
+    }
+
+    /* Mobile-first responsive approach */
+    .home-slider {
+        width: 100%;
+        padding-bottom: 20px;
+    }
+
+    .swiper-slide {
+        width: auto !important;
+        height: auto !important;
+    }
+
+    @media (max-width: 640px) {
+        .swiper-slide {
+            max-width: 85vw !important;
+        }
+    }
+  </style>
+</head>
+
+<body class="font-cinzel w-screen h-screen">
+  <!-- Landing Page -->
+ 
+  <div class="min-h-screen w-screen bg-black">
+    <!-- Navigation Bar -->
+    <nav id="navbar"
+      class="fixed w-full z-50 pt-4 translate-y-0 lg:translate-y-0 transition-transform duration-500 ease-in-out px-4">
+      <div class="max-w-6xl justify-center items-center flex mx-auto">
+        <div
+          class="bg-[#FFA500] sm:opacity-90 opacity-90 rounded-full sm:w-[25vw] w-[100vw] px-2 py-4 flex justify-center items-center space-x-8">
+          
+          <a href="events.html" class="text-white hover:text-white hover:opacity-50 transition-colors">Events</a>
+          <a href="caportal.html" class="text-white hover:text-white hover:opacity-50 transition-colors">CA Portal</a>
+          <a href="sponsor.html" class="text-white hover:text-white hover:opacity-50 transition-colors">Sponsorship</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content with 4 Sections -->
+    <div class="min-h-screen w-screen bg-black relative">
+      <div class="absolute z-10 top-0 left-0 w-full h-full">
+
+        <div class="inset-0 grid grid-cols-2 md:grid-cols-4 w-screen h-screen md:gap-2 lg:gap-0">
+
+          <div class="relative glow w-full h-full overflow-hidden cursor-pointer">
+            <img src="/images/i1.jpg" width="300px" height="400px" alt="Concert 1"
+              class="w-full h-full object-cover transition-opacity duration-500 ease-in-out opacity-30 hover:opacity-100" />
+          </div>
+
+
+          <div class="relative glow w-full h-full overflow-hidden cursor-pointer">
+            <img src="/images/i2.jpg" width="300px" height="400px" alt="Concert 2"
+              class="w-full h-full object-cover transition-opacity duration-500 ease-in-out opacity-30 hover:opacity-100" />
+          </div>
+
+
+          <div class="relative glow w-full h-full overflow-hidden cursor-pointer">
+            <img src="/images/1.png" lt="Concert 3"
+              class="w-full h-full object-cover transition-opacity duration-500 ease-in-out opacity-30 hover:opacity-100" />
+          </div>
+
+
+          <div class="relative glow w-full h-full overflow-hidden cursor-pointer">
+            <img src="/images/flashback/1.jpg" width="300px" height="400px" alt="Concert 4"
+              class="w-full h-full object-cover transition-opacity duration-500 ease-in-out opacity-30 hover:opacity-100" />
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="absolute inset-0 mx-auto flex justify-center items-center encore">
+        <img src="/images/encoretext.png" width="300px" height="400px" alt="ENCORE" class="w-{400} h-{400} z-10" />
+      </div>
+
+
+    </div>
+
+    <!-- Second content -->
+    <div class="sm:min-h-screen w-screen bg-black">
+      
+      <div class="bg-[#FFA500] w-full h-auto md:h-[270px] relative">
+        <div class="pt-6 px-4 md:px-16">
+          <!-- Responsive Heading -->
+          <h1 class="text-white text-4xl md:text-[110px] text-center leading-tight font-Cinzel tracking-tight">
+            NAWABI <br />
+            ELEGANCE.
+          </h1>
+          <div class="mt-4">
+            <!-- Container for Image and Text/Buttons -->
+            <div class="w-full flex flex-col md:flex-row gap-4 items-center justify-center">
+              <!-- Image Container -->
+              <div id="image-container"
+                class="w-full md:w-1/2 h-[200px] md:h-[250px] lg:h-[300px] flex items-center rounded-2xl justify-center border-2 border-gray-500 overflow-hidden glow relative">
+                <img id="image" src="/images/bg.jpg" alt="Image"
+                  class="w-full h-full rounded-2xl object-cover opacity-100 transition-opacity duration-500" />
+              </div>
+
+              <!-- Text and Buttons Container -->
+              <div class="w-full md:w-1/2 flex flex-col gap-4 items-center mt-4 md:mt-0 px-4">
+                <p id="image-text" class="text-sm md:text-base text-white text-center">
+                  Beautiful Nature – Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </p>
+                <div class="flex gap-4">
+                  <button id="prev-button"
+                    class="p-3 bg-blue-500 hover:bg-[#FFA500]  transition rounded-full text-white text-xl">
+                    ←
+                  </button>
+                  <button id="next-button"
+                    class="p-3 bg-blue-500  hover:bg-[#FFA500] transition rounded-full text-white text-xl">
+                    →
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Animated Text Below -->
+            <h2 id="animated-text"
+              class="text-[#FFA500]  text-3xl md:text-[60px] font-bold tracking-wider text-left mt-4">
+              9TH → 11TH MARCH
+            </h2>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+    </div>
+
+    <!-- Third content -->
+
+    <section class="relative w-screen overflow-hidden">
+      <div class="max-w-screen max-h-screen mx-auto">
+        <div class="bg-white rounded-lg shadow-lg p-8 relative overflow-hidden">
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center relative z-10">
+            <div class="p-6">
+              <div class="text-[#FFA500] text-5xl lg:text-6xl font-serif mb-2">
+                20k+
+              </div>
+              <div class="text-gray-600">Footfall</div>
+            </div>
+
+            <div class="p-6">
+              <div class="text-[#FFA500] text-5xl lg:text-6xl font-serif mb-2">
+                25+
+              </div>
+              <div class="text-gray-600">Events</div>
+            </div>
+
+            <div class="p-6">
+              <div class="text-[#FFA500] text-5xl lg:text-6xl font-serif mb-2">
+                100+
+              </div>
+              <div class="text-gray-600">Performers</div>
+            </div>
+
+            <div class="p-6">
+              <div class="text-[#FFA500] text-5xl lg:text-6xl font-serif mb-2">
+                10+
+              </div>
+              <div class="text-gray-600">Workshops</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fourth content -->
+
+    <div
+      class="relative flex flex-col gap-8  items-center justify-center w-screen min-h-[70vh] px-8 py-16 overflow-hidden">
+
+      <div class="absolute inset-0 w-full h-full z-0">
+        <Image src="/images/s3.svg" width=[100vw] height=[100vh] alt="Background Image" fill class="object-cover" />
+      </div>
+
+
+      <div class="relative z-10 flex flex-col gap-8 items-center justify-center text-center">
+        <h2 class="text-5xl text-[#FFA500] font-extrabold  drop-shadow-md">
+          About Encore 25
+        </h2>
+        <div class="bg-black/60 font-serif rounded-xl p-6 max-w-4xl">
+          <p class=" text-white sm:text-xl text-[12px] leading-relaxed">
+            Embark on a legacy as the Institute of Engineering and Technology, Lucknow, proudly unfolds the annual saga
+            of Encore. With a storied history spanning many years, this iconic event has evolved into a beacon of
+            excellence and innovation.
+            <br />
+            Encore has had the honor of hosting renowned personalities, including the melodious Jubin Nautiyal and the
+            vivacious Neha Kakkar, whose captivating performances added an unforgettable dimension to the narrative.
+            <br /><br />
+            Join us for a time-honored celebration where tradition gracefully intertwines with modernity, and where the
+            echoes of the past resonate with the promise of an even grander future. Beyond a mere gathering, Encore is a
+            testament to the enduring spirit of creativity, talent, and camaraderie that has defined our institution
+            over the years.
+            <br /><br />
+            Don’t miss your chance to be part of this historic event that continues to attract and inspire with each
+            passing year. Immerse yourself in the symphony of brilliance and witness the convergence of legendary
+            legacies at Encore!
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Fivth content  -->
+    <div
+      class="flex flex-col items-center justify-center w-screen min-h-screen sm:bg-[url('/images/d22.png')] bg-[url('/images/en.png')] bg-cover bg-center">
+      <h2 href="events.html" class="sm:text-white text-white m-0 flex justify-center items-center  height-20vh text-5xl sm:text-3xl">Events</h2>
+      <!-- <section class="home flex  justify-center items-center" id="home">
+        <div class="swiper mySwiper home-slider">
+          <div class="swiper-wrapper">
+            
+            <script>
+              for (let i = 1; i <= 29; i++) {
+                document.write(`
+                            <div class="swiper-slide rounded-lg sm:overflow-hidden max-h-[80vh] max-w-[90vw] h-[486px] w-[342px]">
+                                <img src="images/event/${i}.jpg" alt="" class="h-full w-full object-cover">
+                            </div>
+                        `);
+              }
+            </script>
+          </div>
+        </div>
+      </section> -->
+
+
+      <section class="home flex justify-center items-center" id="home">
+        <div class="swiper mySwiper home-slider w-full">
+            <div class="swiper-wrapper">
+                <script>
+                    for (let i = 1; i <= 29; i++) {
+                        document.write(`
+                            <div class="swiper-slide rounded-lg overflow-hidden aspect-[342/486] sm:max-h-[80vh] sm:h-[486px] sm:w-[342px] max-w-[90vw] ">
+                                <img src="images/event/${i}.jpg" alt="" class="h-full w-full object-cover">
+                            </div>
+                        `);
+                    }
+                </script>
+            </div>
+        </div>
+    </section>
+      <a href="events.html" class="text-xl bg-white font-serif text-[#EA9901] p-2 border-0 rounded-xl mt-6">Click
+        here to enroll in your favourite Event</a>
+    </div>
+
+
+
+
+
+
+    <!-- sixth content -->
+    <div class=" w-screen">
+      <Image src="/images/count2.png" width={1500} height={1000} class="ribbonImg w-screen " alt="/" />
+    </div>
+
+
+
+    <!-- 7th content -->
+    <!-- Gallery -->
+    <div class="bg-black h-[90vh] flex justify-center items-center flex-col gap-2">
+      <p class="font-cenzil text-4xl pb-4 text-white">✨ FlashBack ✨</p>
+
+      <div class="grid grid-cols-2  lg:grid-cols-4 gap-2 overflow-hidden">
+
+        <!-- Column 1 -->
+        <div class="h-screen max-h-[calc(100vh-200px)] overflow-y-auto px-1 hide-scrollbar">
+          <img src="/images/flashback/1.jpg" class="mt-2 w-full rounded-lg" />
+          <img src="/images/i1.jpg" class="mt-2 w-full rounded-lg" />
+          <img src="/images/i3.jpg" class="mt-2 w-full rounded-lg" />
+          <img src="/images/flashback/2.jpg" class="mt-2 w-full rounded-lg" />
+          <img src="/images/i2.jpg" class="mt-2 w-full rounded-lg" />
+          <img src="//images/flashback/3.jpg" class="mt-2 w-full rounded-lg" />
+          <img src="/images/i1.jpg" class="mt-2 w-full rounded-lg" />
+        </div>
+
+        <!-- Column 2 -->
+        <div class="h-auto max-h-[calc(100vh-200px)] overflow-y-auto px-1 hide-scrollbar">
+          <img src="/images/i1.jpg" class="mt-2 w-full rounded-lg" />
+          <img src="/images/i1.jpg" class="mt-2 w-full rounded-lg" />
+          <img src="/images/i2.jpg" class="mt-2 w-full rounded-lg" />
+          <img src="/images/i3.jpg" class="mt-2 w-full rounded-lg" />
+          <img src="/images/i4.jpg" class="mt-2 w-full rounded-lg" />
+          <img src="/images/i1.jpg" class="mt-2 w-full rounded-lg" />
+        </div>
+
+        <!-- Column 3 -->
+        <div class="h-auto max-h-[calc(100vh-200px)] overflow-y-auto px-1 hide-scrollbar">
+          <img src="/images/flashback/4.jpg" class="mt-2 w-full rounded-lg" />
+          <img src="/images/i1.jpg" class="mt-2 w-full rounded-lg" />
+          <img src="/images/i2.jpg" class="mt-2 w-full rounded-lg" />
+          <img src="/images/i3.jpg" class="mt-2 w-full rounded-lg" />
+          <img src="/images/i4.jpg" class="mt-2 w-full rounded-lg" />
+          <img src="/images/i1.jpg" class="mt-2 w-full rounded-lg" />
+          <img src="/images/i2.jpg" class="mt-2 w-full rounded-lg" />
+        </div>
+
+        <!-- Column 4 -->
+        <div class="h-auto max-h-[calc(100vh-200px)] overflow-y-auto px-1 hide-scrollbar">
+          <img src="/images/i1.jpg" class="mt-2 w-full rounded-lg" />
+          <img src="/images/i1.jpg" class="mt-2 w-full rounded-lg" />
+          <img src="/images/i1.jpg" class="mt-2 w-full rounded-lg" />
+          <img src="/images/i1.jpg" class="mt-2 w-full rounded-lg" />
+          <img src="/images/i1.jpg" class="mt-2 w-full rounded-lg" />
+          <img src="/images/i1.jpg" class="mt-2 w-full rounded-lg" />
+        </div>
+
+      </div>
+
+
+
+
+    </div>
+
+
+    <!--Footer Content -->
+
+    <div class="bg-black h-screen w-screen pt-8 flex flex-col lg:gap-32 items-center justify-center">
+      <div class="text-center items-start flex flex-col leading-none">
+        <div class=" sm:flex  sm:w-[100vw] w-[90vw] h-[70vh] items-center justify-center">
+          <div><img src="/images/lkoi.svg" class="w-[100vw] sm:w-[100vw] sm:h-[90vh]  h-[90vw] object-center"
+              width="300px" height="400px" alt=""></div>
+
+          <!-- Circular Text Button -->
+          <div class="relative flex w-[50vw] h-[30vh]  items-center justify-center">
+
+            <!-- Spinning Circular SVG -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="250" height="250" viewBox="0 0 200 200"
+              class="text-lg  slow-spin  ">
+
+              <circle cx="100" cy="100" r="60" fill="none" />
+
+
+              <path id="circlePath" d="M 100,100 m -75,0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0" fill="none" />
+
+
+              <text fill="orange">
+                <textPath href="#circlePath" startOffset="0%">
+                  Take part in events •
+                </textPath>
+                <textPath href="#circlePath" startOffset="50%">
+                  Register now •
+                </textPath>
+              </text>
+            </svg>
+
+            <!-- Clickable Button Inside -->
+            <a href="register"
+              class="absolute w-20 h-20 bg-black rounded-full flex items-center justify-center hover:scale-110 transition">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 12">
+                <path d="M7 7h8.586L5.293 17.293l1.414 1.414L17 8.414V17h2V5H7v2z" fill="white" />
+              </svg>
+            </a>
+          </div>
+
+        </div>
+        <div class=" bg-black w-screen gap-10 sm:flex sm:justify-center sm:items-center justify-between px-4 py-4">
+
+          <div class="flex justify-around  gap-16">
+            <div class="text-gray-700 hover:text-white flex flex-col">
+              <p>HOME</p>
+              <p>EVENT</p>
+              <p>ABOUT</p>
+            </div>
+            <div class="text-gray-700 hover:text-white flex flex-col">
+              <p>CONTACT</p>
+              <p>TERMS</p>
+              <p>PRIVACY</p>
+            </div>
+            <div class="text-gray-700 hover:text-white flex flex-col">
+              <p>INSTAGRAM</p>
+              <p>FACEBOOK</p>{" "}
+            </div>
+          </div>
+          <div class="text-center flex flex-col gap-2 ">
+            <div class="flex gap-4">
+              <div class="sm:text-left pl-4 flex  ">
+                <h3 class="font-bold text-gray-700 hover:text-white mb-2">Encore</h3>
+                <p class="text-gray-500 hover:text-white">©2025</p>
+              </div>
+              <p class="text-gray-700 hover:text-white mb-2"> Contact Us </p>
+            </div>
+            <button
+              class="bg-gray-700 hover:text-white hover:bg-gray-800 lg:w-[20vw] sm:w-[30vw] text-white font-bold py-2 px-4 rounded-full">
+              +91 9175408641
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+  </div>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+
+  <script>
+    // Select all image containers
+    const imageContainers = document.querySelectorAll(".glow");
+
+    // Add event listener to each image container
+    imageContainers.forEach((container) => {
+      container.addEventListener("mouseover", () => {
+        // Get the image element inside the container
+        const image = container.querySelector("img");
+        // Increase opacity to 100% on hover
+        image.style.opacity = 0.7;
+        image.style.transition = "opacity 0.5s ease-in-out";
+      });
+
+      container.addEventListener("mouseout", () => {
+        // Get the image element inside the container
+        const image = container.querySelector("img");
+        // Decrease opacity to 30% on mouse out
+        image.style.opacity = 0.3;
+        image.style.transition = "opacity 0.5s ease-in-out";
+      });
+    });
+
+    // Select the navbar element
+    const navbar = document.getElementById("navbar");
+    let prevScrollPos = window.pageYOffset;
+
+    window.addEventListener("scroll", () => {
+      const currentScrollPos = window.pageYOffset;
+      const navbarHeight = navbar.offsetHeight;
+
+      if (prevScrollPos > currentScrollPos) {
+        // Scrolling up
+        navbar.style.transform = `translateY(0)`;
+      } else {
+        // Scrolling down
+        navbar.style.transform = `translateY(-${navbarHeight}px)`;
+      }
+
+      prevScrollPos = currentScrollPos;
+    });
+
+
+    // 2nd Content logic
+    const images = [
+      { src: "/images/bg.jpg", text: "Beautiful Nature – A peaceful scenery with greenery." },
+      { src: "/images/i1.jpg", text: "Sunset – The golden hour magic in the sky." },
+      { src: "/images/i2.jpg", text: "Mountains – Majestic peaks touching the clouds." },
+      { src: "/images/i3.jpg", text: "Ocean – Waves crashing on the endless shore." }
+    ];
+
+    let currentIndex = 0;
+    const imageElement = document.getElementById("image");
+    const textElement = document.getElementById("image-text");
+    const prevButton = document.getElementById("prev-button");
+    const nextButton = document.getElementById("next-button");
+
+    // Function to update the image and text with animation
+    function updateImage(newIndex) {
+      gsap.to(imageElement, {
+        opacity: 0, duration: 0.5, onComplete: () => {
+          imageElement.src = images[newIndex].src;
+          textElement.textContent = images[newIndex].text;
+          gsap.to(imageElement, { opacity: 1, duration: 0.5 });
+        }
+      });
+    }
+
+    // Next Image
+    nextButton.addEventListener("click", () => {
+      currentIndex = (currentIndex + 1) % images.length; // Loop back to first image
+      updateImage(currentIndex);
+    });
+
+    // Previous Image
+    prevButton.addEventListener("click", () => {
+      currentIndex = (currentIndex - 1 + images.length) % images.length; // Loop to last image if at the first
+      updateImage(currentIndex);
+    });
+
+
+    // Select the element
+   
+    document.addEventListener("DOMContentLoaded", function () {
+      const animatedText = document.getElementById("animated-text");
+
+      // Function to check if the element is in view immediately on load
+      function checkVisibility(entry) {
+        if (entry.isIntersecting) {
+          animatedText.classList.add("show-text");
+        }
+      }
+
+      // Create Intersection Observer
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach(checkVisibility);
+        },
+        { threshold: 0.7 }
+      );
+
+      // Observe the text element
+      observer.observe(animatedText);
+
+      // Manually check on load in case it's already in view
+      const rect = animatedText.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom >= 0) {
+        animatedText.classList.add("show-text");
+      }
+    });
+
+ 
+
+
+
+
+    // fifth content logic
+
+    // Coverflow Swiper Configuration
+    var swiper = new Swiper(".home-slider", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 100,
+        modifier: 2,
+        slideShadows: true,
+      },
+      loop: true,
+      autoplay: {
+        delay: 1000,
+        disableOnInteraction: false,
+      }
+    });
+
+    var fswiper = new Swiper(".f-mySwiper", {
+      effect: "cards",
+      grabCursor: true,
+      loop: true,
+      autoplay: {
+        delay: 1500,
+        disableOnInteraction: false,
+      }
+    });
+
+    
+
+
+
+    // Array of Image Sources
+    const images2 = [
+      "/images/event/10.jpg",
+      "/images/event/11.jpg",
+      "/images/event/12.jpg",
+      "/images/event/13.jpg",
+      "/images/event/14.jpg",
+      "/images/event/15.jpg"
+    ];
+
+    let currentIndex2 = 0; // Track current image index
+    const carImage2 = document.getElementById("carImage2");
+    const nextBtn = document.getElementById("nextBtn");
+    const prevBtn = document.getElementById("prevBtn");
+
+    // Function to Change Image with Animation
+    function changeImage(index) {
+      carImage2.style.transform = "scale(0) rotateY(90deg)"; // Shrink and rotate effect
+      setTimeout(() => {
+        carImage2.src = images[index];
+        carImage2.style.transform = "scale(1) rotateY(0deg)"; // Expand back smoothly
+      }, 300); // Delay to match animation
+    }
+
+    // Next Button Click Event
+    nextBtn.addEventListener("click", () => {
+      currentIndex2 = (currentIndex2 + 1) % images.length; // Loop back when reaching end
+      changeImage(currentIndex2);
+    });
+
+    // Previous Button Click Event
+    prevBtn.addEventListener("click", () => {
+      currentIndex2 = (currentIndex2 - 1 + images.length) % images.length; // Loop back when reaching start
+      changeImage(currentIndex2);
+    });
+
+
+
+
+
+
+    // Gallery
+
+
+
+
+
+  </script>
+  </div>
+</body>
+
+</html>

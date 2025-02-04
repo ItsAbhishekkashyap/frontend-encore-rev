@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Photography</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes slow-spin {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      overflow-x: hidden;
+      font-family: "Cinzel", serif;
+    }
+
+    .slow-spin {
+      animation: slow-spin 15s linear infinite;
+    }
+
+    .hover-circle {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hover-circle::before {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.3);
+      transform: scale(0);
+      transition: all 0.4s ease;
+    }
+
+    .hover-circle:hover::before {
+      transform: scale(12);
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="w-screen h-screen bg-black">
+    <!-- Navbar -->
+
+    <nav id="navbar"
+      class="fixed w-full z-50 pt-4 translate-y-0 lg:translate-y-0 transition-transform duration-500 ease-in-out px-4">
+      <div class="max-w-6xl justify-center items-center flex mx-auto">
+        <div
+          class="bg-[#FFA500] sm:opacity-90 opacity-90 rounded-full sm:w-[25vw] w-[100vw] px-2 py-4 flex justify-center items-center space-x-8">
+          <!-- <a href="#" class="text-white hover:text-white hover:opacity-50 transition-colors">Home</a> -->
+          <a href="events.html" class="text-white hover:text-white hover:opacity-50 transition-colors">Events</a>
+          <a href="caportal.html" class="text-white hover:text-white hover:opacity-50 transition-colors">CA Portal</a>
+          <a href="sponsor.html" class="text-white hover:text-white hover:opacity-50 transition-colors">Sponsorship</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section with Interactive Circle Hover Effect -->
+    <section
+      class="w-screen h-screen flex flex-col justify-center items-center text-center text-white bg-cover bg-center bg-[url('/images/s5.svg')] px-6">
+      <h1 class="text-4xl sm:text-3xl md:text-5xl font-cinzel mb-4 z-10">Ekanki</h1>
+      <p class="text-lg font-serif sm:text-md md:text-xl mb-6 z-10">(Monoact)</p>
+      <p class="text-base sm:text-sm md:text-lg max-w-2xl mx-auto mb-6 font-serif leading-relaxed z-10">
+        Prepare yourselves for a rollercoaster ride of creativity, drama, and sheer brilliance. The Monoact Extravaganza is not just a competition; it's your ticket to showcase your individual acting prowess and steal the spotlight. Get ready to ignite the stage with your charisma and leave the audience in awe!
+      </p>
+      <a href="signup.html"
+        class="bg-[#ffaf1a] text-black text-lg font-semibold py-3 px-6 sm:px-4 sm:py-2 rounded-lg hover:bg-yellow-400 transition-all duration-300 z-10">
+        Register Me!
+      </a>
+    </section>
+
+    <div class="ribbon w-screen">
+      <Image src="/images/count2.png" width={1500} height={1000} class="ribbonImg w-screen " alt="/" />
+    </div>
+    <!-- Rulebook Section -->
+    <section class="py-16 bg-[url('/images/enc.png')] w-full min-h-screen bg-cover bg-center px-6">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-3xl sm:text-2xl md:text-4xl font-semibold text-center text-white mb-12">Rulebook</h2>
+          <h2 class="font-serif">There will be 2 rounds for mono act.
+            NOTE: CO-ORDINATORS OF THE EVENT COULD CHANGE THE RULES IF FELT NECESSARY.</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-1 font-serif md:grid-cols-2 lg:grid-cols-3 gap-6">
+      
+            <!-- Rule Items -->
+            <div class="bg-[#f9f6ee] text-gray-800 rounded-lg p-5 shadow-lg hover:bg-blue-500 hover:text-white transition-all duration-300">
+              <h3 class="text-xl font-semibold mb-2">1. ROUND 1 (Online Mode: Registration is free)</h3>
+              <p class="text-base">a. Time limit for the monologue videos is 1-3 minutes.
+                b. Sound should be clear.
+                c. Use of any offensive language is strictly prohibited.
+                d. Script can be original or from any movie or play.
+                ->SELECTED CANDIDATES WILL GO TO FINALE.</p>
+            </div>
+      
+            <div class="bg-[#f9f6ee] text-gray-800 rounded-lg p-5 shadow-lg hover:bg-green-500 hover:text-white transition-all duration-300">
+              <h3 class="text-xl font-semibold mb-2">2.  Round 2</h3>
+              <p class="text-base">a. Time limit for the act is 4-8 minutes.
+                b. Exceeding the time limit will result in penalties.
+                c. No pre-recorded music is allowed.
+                d. Candidates have to bring their own props.
+                e. Your act will be judged on: voice clarity, acting, stage pressure management, direction, costume, make-up, and the overall impact of your performance.
+                Embrace the spotlight, let the Encore Monoact Extravaganza be your stage, and leave an everlasting impression!</p>
+            </div>
+      
+            <div class="bg-[#f9f6ee] text-gray-800 rounded-lg p-5 shadow-lg hover:bg-purple-500 hover:text-white transition-all duration-300">
+              <h3 class="text-xl font-semibold mb-2">3. Time Frame:</h3>
+              <p class="text-base">Each dancer will have a set time to dazzle the audience
+                Time limit per round: 2 minutes</p>
+            </div>
+      
+            <div class="bg-[#f9f6ee] text-gray-800 rounded-lg p-5 shadow-lg hover:bg-yellow-500 hover:text-white transition-all duration-300">
+              <h3 class="text-xl font-semibold mb-2">4. Judgement Criteria:</h3>
+              <p class="text-base">Creativity: Originality and uniqueness in dance moves
+                Technique: Precision, control, and mastery of dance techniques
+                Musicality: Synchronisation with the rhythm and musical nuances
+                Style: Expression and personal flair that sets the dancer apart
+                Showmanship: Engagement with the audience and stage presence</p>
+            </div>
+      
+            <div class="bg-[#f9f6ee] text-gray-800 rounded-lg p-5 shadow-lg hover:bg-red-500 hover:text-white transition-all duration-300">
+              <h3 class="text-xl font-semibold mb-2">5. Fair Play:</h3>
+              <p class="text-base">Respect your opponent and the spirit of friendly competition
+                Any unsportsmanlike behaviour may result in disqualification.</p>
+            </div>
+      
+            <div class="bg-[#f9f6ee] text-gray-800 rounded-lg p-5 shadow-lg hover:bg-teal-500 hover:text-white transition-all duration-300">
+              <h3 class="text-xl font-semibold mb-2">6. Stage Usage:</h3>
+              <p class="text-base">Use the entire stage to showcase your moves
+                Props are not allowed in the one-to-one battle.</p>
+            </div>
+      
+            <div class="bg-[#f9f6ee] text-gray-800 rounded-lg p-5 shadow-lg hover:bg-indigo-500 hover:text-white transition-all duration-300">
+              <h3 class="text-xl font-semibold mb-2">7. Song Selection:</h3>
+              <p class="text-base">Participants should be prepared to dance to a variety of music styles
+                Adaptability is key to winning the dance battle.</p>
+            </div>
+      
+            <div class="bg-[#f9f6ee] text-gray-800 rounded-lg p-5 shadow-lg hover:bg-orange-500 hover:text-white transition-all duration-300">
+              <h3 class="text-xl font-semibold mb-2">8. Judges' Decision:</h3>
+              <p class="text-base">Judges' decisions are final and based on a combination of the above criteria
+                The judging panel may include experienced dancers and choreographers.</p>
+            </div>
+      
+            <div class="bg-[#f9f6ee] text-gray-800 rounded-lg p-5 shadow-lg hover:bg-pink-500 hover:text-white transition-all duration-300">
+              <h3 class="text-xl font-semibold mb-2">9. Safety First:</h3>
+              <p class="text-base">Prioritise your safety and that of your opponent
+                Avoid moves that may pose a risk to yourself or others.</p>
+            </div>
+      
+            <div class="bg-[#f9f6ee] text-gray-800 rounded-lg p-5 shadow-lg hover:bg-orange-700 hover:text-white transition-all duration-300">
+              <h3 class="text-xl font-semibold mb-2">10. Enjoy the Encore Solo Showdown:</h3>
+              <p class="text-base">Let your passion for dance shine through every movement
+                Make the stage your canvas and the Encore Solo Showdown your masterpiece.</p>
+            </div>
+      
+            <div class="bg-[#f9f6ee] text-gray-800 rounded-lg p-5 shadow-lg hover:bg-yellow-700 hover:text-white transition-all duration-300">
+              <h3 class="text-xl font-semibold mb-2">11. Rulebook Adaptation:</h3>
+              <p class="text-base">Rules are subject to adaptation for the smooth flow of the competition
+                Any changes will be communicated by the organisers.</p>
+            </div>
+      
+            <div class="bg-[#f9f6ee] text-gray-800 rounded-lg p-5 shadow-lg hover:bg-green-700 hover:text-white transition-all duration-300">
+              <h3 class="text-xl font-semibold mb-2">12. Cheers and Respect:</h3>
+              <p class="text-base">Applaud your opponent; acknowledge the energy and effort they bring to the dance floor
+                This is a celebration of dance, so let the rhythm unite everyone
+                May the Encore Solo Showdown be a dance battle to remember</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+
+    
+    <div class="ribbon w-screen">
+      <Image src="/images/count2.png" width={1500} height={1000} class="ribbonImg w-screen " alt="/" />
+    </div>
+    
+    <!-- Registration Section -->
+    <section id="register" class="py-16  bg-gray-500 text-white text-center px-6">
+      <h2 class="text-2xl sm:text-xl md:text-3xl font-cinzel mb-4">Ready to Participate?</h2>
+      <p class="text-base sm:text-sm md:text-lg font-serif mb-8">Submit your best shots and tell a story through your photography.
+        Don't miss the chance to showcase your talent!</p>
+      <a href="signup.html"
+        class="bg-yellow-500 text-black text-lg sm:text-md md:text-lg font-semibold py-3 px-6 sm:px-4 sm:py-2 rounded-lg hover:bg-yellow-400 transition-all duration-300">
+        Register Now
+      </a>
+    </section>
+
+
+    <!-- Footer -->
+    <div class="bg-black h-screen w-screen flex flex-col lg:gap-32 items-center justify-center">
+      <div class="text-center items-start flex flex-col leading-none">
+        <div class="sm:flex lg:pt-10 sm:w-[100vw] w-[90vw] h-[70vh] items-center justify-center">
+          <div>
+            <img src="/images/lkoi.svg" class="w-[100vw] sm:w-[100vw] sm:h-[90vh] h-[90vw] object-center" width="300px"
+              height="400px" alt="" />
+          </div>
+
+          <!-- Circular Text Button -->
+          <div class="relative flex w-[50vw] h-[30vh] items-center justify-center">
+            <!-- Spinning Circular SVG -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="250" height="250" viewBox="0 0 200 200"
+              class="text-lg slow-spin">
+              <circle cx="100" cy="100" r="60" fill="none" />
+
+              <path id="circlePath" d="M 100,100 m -75,0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0" fill="none" />
+
+              <text fill="orange">
+                <textPath href="#circlePath" startOffset="0%">
+                  Take part in events •
+                </textPath>
+                <textPath href="#circlePath" startOffset="50%">
+                  Register now •
+                </textPath>
+              </text>
+            </svg>
+
+            <!-- Clickable Button Inside -->
+            <a href="register"
+              class="absolute w-20 h-20 bg-black rounded-full flex items-center justify-center hover:scale-110 transition">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 12">
+                <path d="M7 7h8.586L5.293 17.293l1.414 1.414L17 8.414V17h2V5H7v2z" fill="white" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="bg-black w-screen gap-10 sm:flex sm:justify-center sm:items-center justify-between px-4 py-4">
+          <div class="flex justify-around gap-16">
+            <div class="text-gray-700 hover:text-white flex flex-col">
+              <p>HOME</p>
+              <p>EVENT</p>
+              <p>ABOUT</p>
+            </div>
+            <div class="text-gray-700 hover:text-white flex flex-col">
+              <p>CONTACT</p>
+              <p>TERMS</p>
+              <p>PRIVACY</p>
+            </div>
+            <div class="text-gray-700 hover:text-white flex flex-col">
+              <p>INSTAGRAM</p>
+              <p>FACEBOOK</p>
+              {" "}
+            </div>
+          </div>
+          <div class="text-center flex flex-col gap-2">
+            <div class="flex gap-4">
+              <div class="sm:text-left pl-4 flex">
+                <h3 class="font-bold text-gray-700 hover:text-white mb-2">
+                  Encore
+                </h3>
+                <p class="text-gray-500 hover:text-white">©2025</p>
+              </div>
+              <p class="text-gray-700 hover:text-white mb-2">Contact Us</p>
+            </div>
+            <button
+              class="bg-gray-700 hover:text-white hover:bg-gray-800 lg:w-[20vw] sm:w-[30vw] text-white font-bold py-2 px-4 rounded-full">
+              +91 9175408641
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // for navbar
+    const navbar = document.getElementById("navbar");
+    let prevScrollPos = window.pageYOffset;
+
+    window.addEventListener("scroll", () => {
+      const currentScrollPos = window.pageYOffset;
+      const navbarHeight = navbar.offsetHeight;
+
+      if (prevScrollPos > currentScrollPos) {
+        // Scrolling up
+        navbar.style.transform = `translateY(0)`;
+      } else {
+        // Scrolling down
+        navbar.style.transform = `translateY(-${navbarHeight}px)`;
+      }
+
+      prevScrollPos = currentScrollPos;
+    });
+  </script>
+</body>
+
+</html>
