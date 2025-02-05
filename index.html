@@ -11,22 +11,20 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet" />
 
   <!-- Swiper.js CSS -->
   <script src="https://kit.fontawesome.com/536b7f8348.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap">
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  
-  
-  
+
+
+
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    /* @import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap'); */
-
     /* Custom CSS for hover effect */
     .image-container img {
       transition: opacity 0.5s ease-in-out;
@@ -40,7 +38,10 @@
       box-sizing: border-box;
       overflow-x: hidden;
       font-family: "Cinzel", serif;
-      font-family: 'Marcellus', serif;
+    }
+
+    .snd {
+      font-family: "Marcellus", serif;
     }
 
     .flip {
@@ -133,6 +134,7 @@
       border: 2px solid rgba(255, 215, 0, 0.7);
       transition: all 0.3s ease-in-out;
     }
+
     .faq-item:hover {
       background: rgba(255, 215, 0, 0.15);
       transform: scale(1.02);
@@ -193,7 +195,7 @@
 
 
           <div class="relative glow w-full h-full overflow-hidden cursor-pointer">
-            <img src="/images/1.png" lt="Concert 3"
+            <img src="/images/frontimg2.svg" lt="Concert 3"
               class="w-full h-full object-cover transition-opacity duration-500 ease-in-out opacity-30 hover:opacity-100" />
           </div>
 
@@ -230,14 +232,17 @@
               <!-- Image Container -->
               <div id="image-container"
                 class="w-full md:w-1/2 h-[200px] md:h-[250px] lg:h-[300px] flex items-center rounded-2xl justify-center border-2 border-gray-500 overflow-hidden glow relative">
-                <img id="image" src="/images/bg.jpg" alt="Image"
+                <img id="image" src="/images/rumi.svg" alt="Image"
                   class="w-full h-full rounded-2xl object-cover opacity-100 transition-opacity duration-500" />
               </div>
 
               <!-- Text and Buttons Container -->
               <div class="w-full md:w-1/2 flex flex-col gap-4 items-center mt-4 md:mt-0 px-4">
-                <p id="image-text" class="text-sm md:text-base text-white text-center">
-                  Beautiful Nature – Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                <p id="image-text" class="text-white font-Marcellus text-center mx-auto leading-relaxed 
+                sm:text-4xl text-2xl md:text-base lg:text-lg max-w-3xl px-4">
+                  Step into the world of grandeur and elegance! Encore 2025 welcomes you to a celebration infused with
+                  the royalty of Nawabs and the energy of youth. The spirit of Lucknow comes alive as tradition meets
+                  modern festivity. Are you ready to witness history in the making?
                 </p>
                 <div class="flex gap-4">
                   <button id="prev-button"
@@ -442,7 +447,8 @@
 
     <!-- 8th content -->
     <div class="w-screen h-screen flex justify-center items-center font-Marcellus bg-black sm:bg-black text-white">
-      <div class="w-screen h-screen flex justify-center p-6 items-center font-Marcellus bg-[url('/images/faqmob.svg')] sm:bg-[url('/images/animationbck.svg')] bg-cover bg-center bg-fixed bg-black text-white">
+      <div
+        class="w-screen h-screen flex justify-center p-6 items-center font-Marcellus bg-[url('/images/faqmob.svg')] sm:bg-[url('/images/animationbck.svg')] bg-cover bg-center bg-fixed bg-black text-white">
         <!-- FAQ Container -->
         <div class="w-full max-w-5xl p-6 bg-black bg-opacity-70 rounded-2xl shadow-2xl sm:border  border-[#FFA500]">
           <h1 class="text-5xl font-bold text-center mb-8 text-[#FFA500] tracking-widest">
@@ -451,7 +457,8 @@
           <div class="space-y-6">
             <!-- FAQ Item 1 -->
             <div class="faq-item p-5 rounded-lg shadow-lg">
-              <button class="faq-toggle w-full text-left flex justify-between items-center text-xl font-semibold text-[#FFA500] focus:outline-none">
+              <button
+                class="faq-toggle w-full text-left flex justify-between items-center text-xl font-semibold text-[#FFA500] focus:outline-none">
                 What is Encore?
                 <span class="icon transition-transform duration-300">▼</span>
               </button>
@@ -459,10 +466,11 @@
                 Encore is the annual cultural fest of IET Lucknow, featuring music, dance, drama, and more.
               </p>
             </div>
-            
+
             <!-- FAQ Item 2 -->
             <div class="faq-item p-5 rounded-lg shadow-lg">
-              <button class="faq-toggle w-full text-left flex justify-between items-center text-xl font-semibold text-[#FFA500] focus:outline-none">
+              <button
+                class="faq-toggle w-full text-left flex justify-between items-center text-xl font-semibold text-[#FFA500] focus:outline-none">
                 When is the fest happening?
                 <span class="icon transition-transform duration-300">▼</span>
               </button>
@@ -470,32 +478,37 @@
                 The fest will take place from March 9th to March 11th, 2025, at the IET Lucknow campus.
               </p>
             </div>
-            
+
             <!-- FAQ Item 3 -->
             <div class="faq-item p-5 rounded-lg shadow-lg">
-              <button class="faq-toggle w-full text-left flex justify-between items-center text-xl font-semibold text-[#FFA500] focus:outline-none">
+              <button
+                class="faq-toggle w-full text-left flex justify-between items-center text-xl font-semibold text-[#FFA500] focus:outline-none">
                 How can I participate in events?
                 <span class="icon transition-transform duration-300">▼</span>
               </button>
               <p class="faq-answer mt-2 text-gray-200">
-                Students can register online through the official Encore website or visit the registration desk on campus.
+                Students can register online through the official Encore website or visit the registration desk on
+                campus.
               </p>
             </div>
-            
+
             <!-- FAQ Item 4 -->
             <div class="faq-item p-5 rounded-lg shadow-lg">
-              <button class="faq-toggle w-full text-left flex justify-between items-center text-xl font-semibold text-[#FFA500] focus:outline-none">
+              <button
+                class="faq-toggle w-full text-left flex justify-between items-center text-xl font-semibold text-[#FFA500] focus:outline-none">
                 Are there any registration fees?
                 <span class="icon transition-transform duration-300">▼</span>
               </button>
               <p class="faq-answer mt-2 text-gray-200">
-                Some events have free entry, while others may have a nominal registration fee. Details are available on this website.
+                Some events have free entry, while others may have a nominal registration fee. Details are available on
+                this website.
               </p>
             </div>
-            
+
             <!-- FAQ Item 5 -->
             <div class="faq-item p-5 rounded-lg shadow-lg">
-              <button class="faq-toggle w-full text-left flex justify-between items-center text-xl font-semibold text-[#FFA500] focus:outline-none">
+              <button
+                class="faq-toggle w-full text-left flex justify-between items-center text-xl font-semibold text-[#FFA500] focus:outline-none">
                 Will there be food stalls at the venue?
                 <span class="icon transition-transform duration-300">▼</span>
               </button>
@@ -513,7 +526,7 @@
             button.addEventListener("click", () => {
               const answer = button.nextElementSibling;
               const icon = button.querySelector(".icon");
-    
+
               // Check if answer is already expanded
               if (answer.style.maxHeight && answer.style.maxHeight !== "0px") {
                 // Collapse the answer
@@ -625,23 +638,23 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script> -->
   <script>
-    
+
     const imageContainers = document.querySelectorAll(".glow");
 
-    
+
     imageContainers.forEach((container) => {
       container.addEventListener("mouseover", () => {
-        
+
         const image = container.querySelector("img");
-        
+
         image.style.opacity = 0.7;
         image.style.transition = "opacity 0.5s ease-in-out";
       });
 
       container.addEventListener("mouseout", () => {
-        
+
         const image = container.querySelector("img");
-        
+
         image.style.opacity = 0.3;
         image.style.transition = "opacity 0.5s ease-in-out";
       });
@@ -669,10 +682,10 @@
 
     // 2nd Content logic
     const images = [
-      { src: "/images/bg.jpg", text: "Beautiful Nature – A peaceful scenery with greenery." },
-      { src: "/images/i1.jpg", text: "Sunset – The golden hour magic in the sky." },
-      { src: "/images/i2.jpg", text: "Mountains – Majestic peaks touching the clouds." },
-      { src: "/images/i3.jpg", text: "Ocean – Waves crashing on the endless shore." }
+      { src: "/images/rumi.svg", text: "Step into the world of grandeur and elegance! Encore 2025 welcomes you to a celebration infused with the royalty of Nawabs and the energy of youth. The spirit of Lucknow comes alive as tradition meets modern festivity. Are you ready to witness history in the making?" },
+      { src: "/images/qawwali.jpg", text: "Feel the rhythm of Lucknow! From the hypnotic beats of Qawwali and Sufi Nights to the graceful twirls of Kathak performances, Encore is a stage for the timeless cultural richness of Awadh. Get ready to be spellbound by the symphony of tradition and talent!" },
+      { src: "/images/crowd.svg", text: "This is where legends are made! Brace yourself for intense battles of wit, talent, and creativity at Encore’s thrilling competitions. Whether it's the Fashion Walk, Open Mic, Hackathon, or Street Play, it's your time to shine under the Nawabi spotlight! Will you claim the crown?" },
+      { src: "/images/bara.svg", text: "Step into the pages of history! Lucknow, the city of Nawabs, whispers stories of its glorious past through its magnificent Bara Imambara, Chattar Manzil, and Bhool Bhulaiya. At Encore, we bring this heritage alive with a fest that blends tradition, art, and modern celebration. Let’s recreate history together!" }
     ];
 
     let currentIndex = 0;
